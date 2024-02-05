@@ -7,7 +7,7 @@ param (
 function Write-Log {
     Param ([string]$message)
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    $logMessage = "${timestamp}: $message" # Corrected line
+    $logMessage = "${timestamp}: $message"
     Write-Output $logMessage
     Add-Content -Path $logFile -Value $logMessage
 }
